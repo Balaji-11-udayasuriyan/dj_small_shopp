@@ -3,6 +3,8 @@ from .models import Category, Brand
 
 # Register your models here.
 
+# categroy admin
+
 class CategoryAdmin(admin.ModelAdmin):
 
     list_display = ('id','name')
@@ -13,4 +15,14 @@ class CategoryAdmin(admin.ModelAdmin):
 
 admin.site.register(Category,CategoryAdmin)
 
-admin.site.register(Brand)
+# brand admin
+
+class BrandAdmin(admin.ModelAdmin):
+
+    list_display = ('id','name','image_path','status',)
+
+    search_fields = ('id','name','status')
+
+    ordering = ['id']
+
+admin.site.register(Brand,BrandAdmin)
