@@ -62,4 +62,6 @@ class OrderAdmin(admin.ModelAdmin):
 
     ordering = ['id']
 
+
+
 admin.site.register(Order, OrderAdmin)
